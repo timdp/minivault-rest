@@ -1,16 +1,16 @@
-var express = require('express'),
-    morgan = require('morgan'),
-    bodyParser = require('body-parser'),
-    router = require('./');
+var express = require('express')
+var morgan = require('morgan')
+var bodyParser = require('body-parser')
+var router = require('./')
 
-var PORT = 4000;
+var PORT = 4000
 
-var app = express();
-app.use(morgan('tiny'));
-app.use(bodyParser.json());
+var app = express()
+app.use(morgan('tiny'))
+app.use(bodyParser.json())
 
-app.use(router);
+app.use(router)
 
-app.listen(PORT, function() {
-  console.info('Listening on port %d', PORT);
-});
+app.listen(PORT, function () {
+  console.info('Listening on port %d', PORT)
+})
