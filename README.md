@@ -1,5 +1,4 @@
-Minivault (RESTful API)
-=======================
+# Minivault (RESTful API) [![npm](https://img.shields.io/npm/v/minivault-rest.svg)](https://www.npmjs.com/package/minivault-rest)
 
 A pretty rudimentary vault. Keeps a key-value store under `~/.minivault`,
 encrypted with a password.
@@ -10,20 +9,17 @@ You may also be interested in the
 and the
 [core API](https://www.npmjs.com/package/minivault-core).
 
-Usage
------
+## Usage
 
 1. One-time setup: run `npm install`.
 2. Run `npm start` to start the daemon.
 3. Talk to the API at [localhost:4000](http://localhost:4000/).
 
-Author
-------
+## Author
 
 [Tim De Pauw](https://tmdpw.eu/)
 
-License
--------
+## License
 
 Copyright &copy; 2015 Tim De Pauw
 
