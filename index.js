@@ -5,17 +5,16 @@ var Minivault = require('minivault-core')
 
 var router = express.Router()
 
-var authenticate = function (req, res, next) {
+router.all('*', function (req, res, next) {
   var secret = req.get('X-Secret')
   if (typeof secret !== 'string' || secret.length === 0) {
     return res.status(401).json({error: 'Invalid secret'})
   }
   req.vault = new Minivault({secret: secret})
   next()
-}
+})
 
 router.route('/entries')
-  .all(authenticate)
   .get(function (req, res) {
     req.vault.index()
       .then(function (index) {
@@ -26,7 +25,6 @@ router.route('/entries')
   })
 
 router.route('/entries/:id')
-  .all(authenticate)
   .get(function (req, res) {
     req.vault.get(req.params.id)
       .then(function (data) {
