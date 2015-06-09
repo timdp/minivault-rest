@@ -14,17 +14,28 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "babel-runtime": "^5.5.4",
     "body-parser": "^1.12.3",
     "express": "^4.12.3",
-    "minivault-core": "^0.2.0",
+    "minivault-core": "^0.3.0",
     "morgan": "^1.5.2"
   },
-  "main": "index.js",
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "mkdirp": "^0.5.1"
+  },
+  "main": "dist/index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "dist/index.js",
+    "dist/server.js"
   ],
   "scripts": {
-    "start": "node server.js"
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
