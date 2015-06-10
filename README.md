@@ -1,4 +1,6 @@
-# Minivault (RESTful API) [![npm](https://img.shields.io/npm/v/minivault-rest.svg)](https://www.npmjs.com/package/minivault-rest) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
+# Minivault (RESTful API)
+
+[![npm](https://img.shields.io/npm/v/minivault-rest.svg)](https://www.npmjs.com/package/minivault-rest) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 A pretty rudimentary vault. Keeps a key-value store under `~/.minivault`,
 encrypted with a password.
