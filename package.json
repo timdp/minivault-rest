@@ -35,6 +35,7 @@
     "dist/server.js"
   ],
   "scripts": {
+    "prepublish": "gulp build",
     "start": "node dist/server.js"
   },
   "repository": {
