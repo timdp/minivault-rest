@@ -13,7 +13,7 @@ gulp.task('clean', function (cb) {
 
 gulp.task('build', function () {
   mkdirp.sync(dest)
-  return gulp.src('src/**/*.js')
+  return gulp.src('src/**/*.es')
     .pipe(plugins.plumber({
       errorHandler: plugins.notify.onError('<%= error.message %>')
     }))
