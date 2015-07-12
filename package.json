@@ -1,6 +1,6 @@
 {
   "name": "minivault-rest",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A pretty rudimentary vault.",
   "keywords": [
     "vault",
