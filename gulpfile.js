@@ -7,8 +7,8 @@ const path = require('path')
 const pkg = require('./package.json')
 const dest = path.dirname(pkg.main)
 
-gulp.task('clean', function (cb) {
-  del([dest], cb)
+gulp.task('clean', function () {
+  del.sync([dest])
 })
 
 gulp.task('build', function () {
