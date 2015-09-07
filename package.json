@@ -39,10 +39,7 @@
     "prepublish": "gulp build",
     "start": "node dist/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/timdp/minivault-rest"
-  },
+  "repository": "timdp/minivault-rest",
   "bugs": {
     "url": "https://github.com/timdp/minivault-rest/issues"
   },
