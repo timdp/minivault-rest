@@ -16,7 +16,7 @@ if (args.length) {
   if (args.length >= 2) {
     hostname = args.shift()
   }
-  port = parseInt(args.shift())
+  port = parseInt(args.shift(), 10)
 }
 
 const app = express()
