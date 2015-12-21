@@ -47,7 +47,7 @@
   ],
   "scripts": {
     "prepublish": "gulp build",
-    "start": "node dist/server.js"
+    "start": "node lib/server.js"
   },
   "repository": "timdp/minivault-rest",
   "bugs": {
