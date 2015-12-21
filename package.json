@@ -14,26 +14,37 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "babel-runtime": "^5.5.4",
+    "babel-runtime": "^6.3.19",
     "body-parser": "^1.12.3",
     "express": "^4.12.3",
     "minivault-core": "^1.0.1",
     "morgan": "^1.5.2"
   },
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.3.13",
+    "babel-plugin-transform-runtime": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
     "del": "^2.0.0",
     "gulp": "^3.9.0",
-    "gulp-babel": "^5.1.0",
-    "gulp-load-plugins": "^0.10.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-coveralls": "^0.1.4",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-mocha": "^2.1.1",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
-    "mkdirp": "^0.5.1"
+    "isparta": "^4.0.0",
+    "mkdirp": "^0.5.0",
+    "run-sequence": "^1.1.5",
+    "standard": "^5.2.2"
   },
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "files": [
     "index.js",
-    "dist/index.js",
-    "dist/server.js"
+    "lib/"
   ],
   "scripts": {
     "prepublish": "gulp build",
