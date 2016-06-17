@@ -27,11 +27,13 @@
     "del": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
+    "gulp-if": "^2.0.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-standard": "^7.0.1",
+    "in-publish": "^2.0.0",
     "run-sequence": "^1.1.5"
   },
   "main": "index.js",
@@ -40,9 +42,11 @@
     "lib/"
   ],
   "scripts": {
-    "prepublish": "gulp build",
     "start": "node lib/server.js",
-    "test": "gulp test"
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "test": "gulp test",
+    "prepublish": "in-publish && npm run build || not-in-publish"
   },
   "repository": "timdp/minivault-rest",
   "bugs": {

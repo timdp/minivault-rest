@@ -5,9 +5,9 @@ import seq from 'run-sequence'
 
 const $ = loadPlugins()
 
-const plumb = () => $.plumber({
+const plumb = () => $.if(!process.env.CI, $.plumber({
   errorHandler: $.notify.onError('<%= error.message %>')
-})
+}))
 
 gulp.task('clean', () => del('lib'))
 
@@ -24,17 +24,13 @@ gulp.task('lint', () => {
   return gulp.src('src/**/*.js')
     .pipe(plumb())
     .pipe($.standard())
-    .pipe($.standard.reporter('default', {
-      breakOnError: false
-    }))
+    .pipe($.standard.reporter('default', {breakOnError: false}))
 })
 
 gulp.task('test', ['lint'])
 
-gulp.task('build', (cb) => seq('lint', 'transpile', cb))
+gulp.task('build', (cb) => seq('test', 'clean', 'transpile', cb))
 
-gulp.task('cleanbuild', (cb) => seq('clean', 'build', cb))
+gulp.task('watch', () => gulp.watch('{src,test}/**/*', ['build']))
 
-gulp.task('watch', () => gulp.watch('{src,test}/**/*', ['cleanbuild']))
-
-gulp.task('default', ['cleanbuild'], () => gulp.start('watch'))
+gulp.task('default', ['build'], () => gulp.start('watch'))
