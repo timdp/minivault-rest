@@ -5,15 +5,10 @@ import seq from 'run-sequence'
 
 const $ = loadPlugins()
 
-const plumb = () => $.if(!process.env.CI, $.plumber({
-  errorHandler: $.notify.onError('<%= error.message %>')
-}))
-
 gulp.task('clean', () => del('lib'))
 
 gulp.task('transpile', () => {
   return gulp.src('src/**/*.js')
-    .pipe(plumb())
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.sourcemaps.write())
@@ -22,7 +17,6 @@ gulp.task('transpile', () => {
 
 gulp.task('lint', () => {
   return gulp.src('{src,test}/**/*.js')
-    .pipe(plumb())
     .pipe($.standard())
     .pipe($.standard.reporter('default', {breakOnError: false}))
 })
