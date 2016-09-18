@@ -50,5 +50,8 @@
   "bugs": {
     "url": "https://github.com/timdp/minivault-rest/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "greenkeeper": {
+    "ignore": ["gulp-standard"]
+  }
 }
