@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.3.19",
-    "body-parser": "^1.12.3",
+    "body-parser": "^1.16.1",
     "express": "^4.12.3",
     "minivault-core": "^1.0.1",
     "morgan": "^1.5.2"
