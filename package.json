@@ -18,7 +18,7 @@
     "body-parser": "^1.12.3",
     "express": "^4.12.3",
     "minivault-core": "^1.0.1",
-    "morgan": "^1.5.2"
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.15.0",
